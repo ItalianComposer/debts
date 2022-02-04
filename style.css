@@ -56,13 +56,19 @@
   border-radius: 0px 10px 10px 0px;
 }
 .main__dolgi {
-  padding-left: 165px;
+  padding-left: 20.6%;
+  padding-top: 6%;
+  padding-bottom: 9.9%;
+  width: 55.5%;
+  height: 534px;
+  max-width: 800px;
 }
 .dolgi__fz {
   font-size: 14px;
   line-height: 140%;
   font-feature-settings: 'pnum' on, 'lnum' on;
   color: #9C9C9C;
+  margin: 0;
 }
 .dolgi__title {
   font-weight: 800;
@@ -70,9 +76,23 @@
   line-height: 136%;
   font-feature-settings: 'pnum' on, 'lnum' on;
   color: #FFFFFF;
+  margin-top: 8px;
+  margin-bottom: 20px;
 }
 .dolgi__ul {
   list-style-image: url(img/arrow.svg);
+  line-height: 2.2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  margin-bottom: 32px;
+}
+.dolgi__ul li {
+  font-weight: 600;
+  font-size: 16px;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #EBEBEB;
 }
 .ul__title {
   font-weight: 600;
@@ -81,16 +101,19 @@
   font-feature-settings: 'pnum' on, 'lnum' on;
   color: #FFFFFF;
 }
-.ul__variants {
-  font-weight: 600;
-  font-size: 16px;
-  font-feature-settings: 'pnum' on, 'lnum' on;
-  color: #EBEBEB;
-}
 .dolgi__button {
   font-weight: 700;
   font-size: 16px;
   line-height: 140%;
   font-feature-settings: 'pnum' on, 'lnum' on;
   color: #FFFFFF;
+  width: 335px;
+  height: 56px;
+  background: #FF4B4B;
+  border-radius: 8px;
+  border-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 7.2%;
 }
