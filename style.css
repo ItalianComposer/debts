@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 .font__opensans-400 {
   font-family: Open Sans;
   font-style: normal;
@@ -143,4 +146,74 @@
   font-feature-settings: 'pnum' on, 'lnum' on;
   color: #000000;
   margin: 0;
+}
+.footer {
+  background: #F2F8FF;
+}
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 285px;
+}
+.contacts__phone {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 140%;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #212121;
+}
+.contacts__mail {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 140%;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #212121;
+}
+.contacts__agree {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 145%;
+  color: rgba(55, 55, 55, 0.7);
+  word-wrap: break-word;
+  max-width: 285px;
+}
+.footer__spec {
+  width: 530px;
+}
+.spec__ul {
+  list-style-image: url(img/line.svg);
+  display: grid;
+  grid-template-columns: repeat(2, 0.5fr);
+  grid-template-rows: repeat(3, 0.5fr);
+}
+.spec__ul li {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #2A394C;
+}
+.spec__title {
+  grid-column: 1 / 3;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 140%;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #14203A;
+}
+.position_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-between;
+  padding-left: 11.5%;
 }
