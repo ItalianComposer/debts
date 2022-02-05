@@ -411,3 +411,50 @@
 #finalScreen {
   display: none;
 }
+.get_consult {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 80px;
+  width: 700px;
+  height: 600px;
+  background: #EDF3F9;
+  border-radius: 4px;
+  left: 25%;
+  top: 25%;
+}
+.get_consult__title {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 140%;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #222222;
+}
+.get_consult_input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px 24px;
+  background: #FFFFFF;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 350px;
+  height: 54px;
+  margin-bottom: 16px;
+}
+.close {
+  padding-left: 91.7%;
+  margin-bottom: 22px;
+  padding-top: 46px;
+}
+#getConsult {
+  display: none;
+}
+#close {
+  border: none;
+}

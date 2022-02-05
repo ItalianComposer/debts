@@ -1,3 +1,4 @@
+let mask = document.querySelector('#mask');
 let getVariants = document.querySelector('#getVariants');
 let next1 = document.querySelector('#next1');
 let back1 = document.querySelector('#back1');
@@ -13,7 +14,18 @@ let stepTwo = document.querySelector('#stepTwo');
 let stepFour = document.querySelector('#stepFour')
 let stepThree = document.querySelector('#stepThree');
 let stepEnd = document.querySelector('#stepEnd');
+let getConsultBtn = document.querySelector('#getConsultBtn');
+let getConsult = document.querySelector('#getConsult');
+let close = document.querySelector('#close');
 
+getConsultBtn.onclick = function () {
+  getConsult.style.display = "flex";
+  mask.style.display = 'block';
+};
+close.onclick = function () {
+  getConsult.style.display = 'none';
+  mask.style.background = '';
+};
 getVariants.onclick = function () {
   stepOne.style.display = 'flex';
   stepZero.style.display = 'none';
@@ -40,11 +52,12 @@ next3.onclick = function () {
 };
 // BUG: не видит "stepEnd"
 next4.onclick = function () {
-  stepEnd.style.dislpay = 'flex';
+  stepEnd.style.display = 'flex';
+  stepFour.style.display = 'none';
 };
 getVars.onclick = function () {
   finalScreen.style.display = 'flex';
-  stepEnd.style.dislpay = 'none';
+  stepEnd.style.display = 'none';
 };
 
 window.addEventListener("DOMContentLoaded", function() {
