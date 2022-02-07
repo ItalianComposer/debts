@@ -1,4 +1,3 @@
-let mask = document.querySelector('#mask');
 let getVariants = document.querySelector('#getVariants');
 let next1 = document.querySelector('#next1');
 let back1 = document.querySelector('#back1');
@@ -17,47 +16,100 @@ let stepEnd = document.querySelector('#stepEnd');
 let getConsultBtn = document.querySelector('#getConsultBtn');
 let getConsult = document.querySelector('#getConsult');
 let close = document.querySelector('#close');
+let overlay = document.querySelector('#get_consult__background');
+let body = document.querySelector('#body');
 
+overlay.onclick = function () {
+  $(overlay).hide();
+  document.body.style.overflow = "";
+}
 getConsultBtn.onclick = function () {
   getConsult.style.display = "flex";
-  mask.style.display = 'block';
+  $(overlay).show();
+  document.body.style.overflow = "hidden";
 };
 close.onclick = function () {
   getConsult.style.display = 'none';
-  mask.style.background = '';
+  $(overlay).hide();
+  document.body.style.overflow = "";
 };
 getVariants.onclick = function () {
   stepOne.style.display = 'flex';
   stepZero.style.display = 'none';
 };
 next1.onclick = function () {
-  stepTwo.style.display = 'flex';
-  stepOne.style.display = 'none';
-};
+  let stepOneReply = document.querySelector('input[name="stepOneFirst"]:checked').value;
+    stepTwo.style.display = 'flex';
+    stepOne.style.display = 'none';
+    $.ajax({
+        url: 'send.php',
+        data: stepOneReply,
+        type: 'POST',
+        success: function (data) {
+            alert(data);
+        }
+    });
+  };
 back1.onclick = function () {
   stepOne.style.display = 'flex';
   stepTwo.style.display = 'none';
 };
 next2.onclick = function () {
+  let stepTwoReply = document.querySelector('input[name="stepTwoSecond"]:checked').value;
   stepThree.style.display = 'flex';
   stepTwo.style.display = 'none';
+  $.ajax({
+      url: 'send.php',
+      data: stepTwoReply,
+      type: 'POST',
+      success: function (data) {
+          alert(data);
+      }
+  });
 };
 back2.onclick = function () {
   stepTwo.style.display = 'flex';
   stepThree.style.display = 'none';
 };
 next3.onclick = function () {
+  let stepThreeReply = document.querySelector('input[name="stepThreeThird"]:checked').value;
   stepFour.style.display = 'flex';
   stepThree.style.display = 'none';
+  $.ajax({
+      url: 'send.php',
+      data: stepThreeReply,
+      type: 'POST',
+      success: function (data) {
+          alert(data);
+      }
+  });
 };
-// BUG: не видит "stepEnd"
 next4.onclick = function () {
+  let stepFourReply = document.querySelector('input[name="stepFourFours"]:checked').value;
   stepEnd.style.display = 'flex';
   stepFour.style.display = 'none';
+  $.ajax({
+      url: 'send.php',
+      data: stepFourReply,
+      type: 'POST',
+      success: function (data) {
+          alert(data);
+      }
+  });
 };
 getVars.onclick = function () {
+  let stepEndName = document.querySelector('input[name="stepFourFours"]:checked').value;
+  let stepEndPhone = document.querySelector('input[name="stepFourFours"]:checked').value;
   finalScreen.style.display = 'flex';
   stepEnd.style.display = 'none';
+  $.ajax({
+      url: 'send.php',
+      data: stepEndName, stepEndPhone,
+      type: 'POST',
+      success: function (data) {
+          alert(data);
+      }
+  });
 };
 
 window.addEventListener("DOMContentLoaded", function() {

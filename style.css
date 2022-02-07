@@ -122,9 +122,9 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 2em;
-  padding: 0 165px;
+  padding: 0 11.5%;
   margin-top: 2em;
-  margin-bottom: 60px;
+  margin-bottom: 4.3%;
 }
 .benefits__item {
   display: flex;
@@ -304,8 +304,48 @@
   margin: 0;
   margin-bottom: 14px;
 }
+label {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  margin-right: 15px;
+}
+input[type=radio] {
+  display: none;
+}
+label:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    left: 0;
+    bottom: 1px;
+    background-color: inherit;
+    border: 1px solid #CCD2E3;
+  }
+.main__dolgi__step_one label:before {
+    border-radius: 10px;
+}
+input[type=radio]:checked + label:before {
+    content: "✔";
+    font-family: 'lucida grande';
+    font-size: 45px;
+    line-height: 60px;
+    text-align: center;
+    color: #f3f3f3;
+}
 .step_one_input {
   margin-right: 11px;
+}
+.step_one_input {
+  content: "";
+	display: inline-block;
+	width: 17px;
+	height: 18px;
+	position: absolute;
+	left: 0;
+	bottom: 1px;
 }
 .step_one__button {
   font-weight: 700;
@@ -412,7 +452,8 @@
   display: none;
 }
 .get_consult {
-  position: fixed;
+  z-index: 20;
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -457,4 +498,16 @@
 }
 #close {
   border: none;
+}
+.radio {
+  background-image: url(img/functionality/radio.svg);
+}
+#get_consult__background {
+  background: rgba(102, 102, 102, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
 }

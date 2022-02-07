@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="jquery-3.6.0.js"></script>
   <title>My Force</title>
 </head>
-<body>
+<body id="body">
   <header class="header flex_container">
     <div class="header__logo">
       <img src="img/Lord_logo2.svg" alt="">
@@ -17,17 +18,20 @@
       <a class="number__phone font__opensans-400" href="#">8 495 230 21 55</a>
     </div>
       <button id="getConsultBtn" class="consult__button font__opensans-400" type="button" name="consult"><img src="img/arrow-blue.svg" alt="">Записаться на консультацию юриста</button>
-      <div class="get_consult" id="getConsult">
-        <div class="close">
-          <button id="close" type="button" name="button"><img src="img/functionality/Close_round.svg" alt=""></button>
+      <div class="" id="get_consult__background">
+        <div class="get_consult" id="getConsult">
+          <div class="close">
+            <button id="close" type="button" name="button"><img src="img/functionality/Close_round.svg" alt=""></button>
+          </div>
+        <h2 class="get_consult__title">Укажите ваши контактные данные</h2>
+        <input class="get_consult_input" type="text" name="" value="">
+        <input class="get_consult_input" id="tel" value="">
+        <div class="flex_container">
+          <button id="get" class="dolgi__button final_step_button font__opensans-400" type="button" name="button">Получить варианты списания</button>
         </div>
-      <h2 class="get_consult__title">Укажите ваши контактные данные</h2>
-      <input class="get_consult_input" type="text" name="" value="">
-      <input class="get_consult_input" id="tel" value="">
-      <div class="flex_container">
-        <button id="get" class="dolgi__button final_step_button font__opensans-400" type="button" name="button">Получить варианты списания</button>
+        <p class="contacts__agree get_consult_agree">*отправляя формы на данном сайте, вы даете согласие на обработку персональных данных в соответствии с 152-ФЗ</p>
+        <div class="overlay"></div>
       </div>
-      <p class="contacts__agree get_consult_agree">*отправляя формы на данном сайте, вы даете согласие на обработку персональных данных в соответствии с 152-ФЗ</p>
     </div>
   </header>
   <div class="content">
@@ -49,10 +53,10 @@
           <img src="img/functionality/progress_bar.svg" alt="">
         </div>
         <h2 class="step_one__title">Укажите общую сумму ваших долгов</h2>
-        <p class="step_one_description"><input class="step_one_input" type="radio" name="" value="менее 500 000  рублей">менее 500 000  рублей</p>
-        <p class="step_one_description"><input class="step_one_input" type="radio" name="" value="от 500 000 до 1 000 000 рублей">от 500 000 до 1 000 000 рублей</p>
-        <p class="step_one_description"><input class="step_one_input" type="radio" name="" value="от 1 000 000 до 5 000 000 рублей">от 1 000 000 до 5 000 000 рублей</p>
-        <p class="step_one_description"><input class="step_one_input" type="radio" name="" value="более 5 000 000">более 5 000 000</p>
+        <label class="step_one_description" for="step_one_input"><input class="step_one_input" type="radio" name="stepOneFirst" value="менее 500 000  рублей">менее 500 000  рублей</label>
+        <label class="step_one_description" for="step_one_input"><input class="step_one_input" type="radio" name="stepOneFirst" value="от 500 000 до 1 000 000 рублей">от 500 000 до 1 000 000 рублей</label>
+        <label class="step_one_description" for="step_one_input"><input class="step_one_input" type="radio" name="stepOneFirst" value="от 1 000 000 до 5 000 000 рублей">от 1 000 000 до 5 000 000 рублей</label>
+        <label class="step_one_description" for="step_one_input"><input class="step_one_input" type="radio" name="stepOneFirst" value="более 5 000 000">более 5 000 000</label>
         <button id="next1" class="step_one__button font__opensans-400" type="button" name="button">Далее<img src="img/arrow.svg" alt=""></button>
       </div>
       <div class="main__dolgi__step_one" id="stepTwo">
@@ -60,11 +64,11 @@
           <img src="img/functionality/progress_bar2.svg">
         </div>
         <h2 class="step_one__title">Есть ли у вас в собственности имущество?</h2>
-        <p class="step_one_description"><input class="step_one_input" type="radio" name="" value="Да, есть квартира (две и более)">Да, есть квартира (две и более)</p>
-        <p class="step_one_description"><input class="step_one_input" type="radio" name="" value="Да, есть автомобиль">Да, есть автомобиль</p>
-        <p class="step_one_description"><input class="step_one_input" type="radio" name="" value="Да, есть коммерческая собственность">Да, есть коммерческая собственность</p>
-        <p class="step_one_description"><input class="step_one_input" type="radio" name="" value="Да, есть другая собственность">Да, есть другая собственность</p>
-        <p class="step_one_description"><input class="step_one_input" type="radio" name="" value="Нет, ничего нет">Нет, ничего нет</p>
+        <label class="step_one_description" for="step_one_input"><input class="step_one_input" type="radio" name="stepTwoSecond" value="Да, есть квартира (две и более)">Да, есть квартира (две и более)</label>
+        <label class="step_one_description" for="step_one_input"><input class="step_one_input" type="radio" name="stepTwoSecond" value="Да, есть автомобиль">Да, есть автомобиль</label>
+        <label class="step_one_description" for="step_one_input"><input class="step_one_input" type="radio" name="stepTwoSecond" value="Да, есть коммерческая собственность">Да, есть коммерческая собственность</label>
+        <label class="step_one_description" for="step_one_input"><input class="step_one_input" type="radio" name="stepTwoSecond" value="Да, есть другая собственность">Да, есть другая собственность</label>
+        <label class="step_one_description" for="step_one_input"><input class="step_one_input" type="radio" name="stepTwoSecond" value="Нет, ничего нет">Нет, ничего нет</label>
         <div class="flex_container">
           <button id="back1" class="step_two__button_back font__opensans-400" type="button" name="button"><img src="img/functionality/back_arrow.svg" alt="">Назад</button>
           <button id="next2" class="step_one__button font__opensans-400" type="button" name="button">Далее<img src="img/arrow.svg" alt=""></button>
@@ -75,11 +79,11 @@
           <img src="img/functionality/progress_bar3.svg">
         </div>
         <h2 class="step_one__title">Совершали ли вы крупные сделки за последние 3 года?</h2>
-        <p class="step_one_description"><input class="step_one_input" type="radio" name="" value="Да. была продажа квартиры / авто / участка">Да. была продажа квартиры / авто / участка</p>
-        <p class="step_one_description"><input class="step_one_input" type="radio" name="" value="Да. была продажа коммерческой собственности">Да. была продажа коммерческой собственности</p>
-        <p class="step_one_description"><input class="step_one_input" type="radio" name="" value="Да, была продажа ИП / ООО">Да, была продажа ИП / ООО</p>
-        <p class="step_one_description"><input class="step_one_input" type="radio" name="" value="Да, была продажа (другое)">Да, была продажа (другое)</p>
-        <p class="step_one_description"><input class="step_one_input" type="radio" name="" value="Нет, ничего не было">Нет, ничего не было</p>
+        <p class="step_one_description"><input class="step_one_input" type="radio" name="stepThreeThird" value="Да. была продажа квартиры / авто / участка">Да. была продажа квартиры / авто / участка</p>
+        <p class="step_one_description"><input class="step_one_input" type="radio" name="stepThreeThird" value="Да. была продажа коммерческой собственности">Да. была продажа коммерческой собственности</p>
+        <p class="step_one_description"><input class="step_one_input" type="radio" name="stepThreeThird" value="Да, была продажа ИП / ООО">Да, была продажа ИП / ООО</p>
+        <p class="step_one_description"><input class="step_one_input" type="radio" name="stepThreeThird" value="Да, была продажа (другое)">Да, была продажа (другое)</p>
+        <p class="step_one_description"><input class="step_one_input" type="radio" name="stepThreeThird" value="Нет, ничего не было">Нет, ничего не было</p>
         <div class="flex_container">
           <button id="back2" class="step_two__button_back font__opensans-400" type="button" name="button"><img src="img/functionality/back_arrow.svg" alt="">Назад</button>
           <button id="next3" class="step_one__button font__opensans-400" type="button" name="button">Далее<img src="img/arrow.svg" alt=""></button>
@@ -90,8 +94,8 @@
           <img src="img/functionality/progress_bar4.svg">
         </div>
         <h2 class="step_one__title step_four__title">Как вы бы хотели получить варианты списанию долгов и консультацию юриста?</h2>
-        <p class="step_one_description"><input class="step_one_input" type="radio" name="" value="В офисе «ЮрКонсалт+»">В офисе «ЮрКонсалт+»</p>
-        <p class="step_one_description"><input class="step_one_input" type="radio" name="" value="По телефону">По телефону</p>
+        <p class="step_one_description"><input class="step_one_input" type="radio" name="stepFourFours" value="В офисе «ЮрКонсалт+»">В офисе «ЮрКонсалт+»</p>
+        <p class="step_one_description"><input class="step_one_input" type="radio" name="stepFourFours" value="По телефону">По телефону</p>
         <div class="flex_container">
           <button id="next4" class="dolgi__button font__opensans-400" type="button" name="button">Получить варианты списания<img src="img/arrow.svg" alt=""></button>
         </div>
@@ -101,8 +105,8 @@
           <img src="img/functionality/progress_bar5.svg">
         </div>
         <h2 class="step_one__title">Укажите ваши контактные данные</h2>
-        <input class="final_step_input" type="text" name="" value="">
-        <input class="final_step_input" id="tel" value="">
+        <input class="final_step_input" type="text" name="stepEndName" value="">
+        <input class="final_step_input" id="tel" name="stepEndPhone" value="">
         <div class="flex_container">
           <button id="getVars" class="dolgi__button final_step_button font__opensans-400" type="button" name="button">Получить варианты списания</button>
         </div>
@@ -173,10 +177,10 @@
       </div>
       <div class="about__social">
         <p class="about font__opensans-400">Больше о нас здесь</p>
-        <img src="img/telegram.svg" alt="">
-        <img src="img/vk.svg" alt="">
-        <img src="img/OK.svg" alt="">
-        <img src="img/instagram.svg" alt="">
+        <a href="#"><img src="img/telegram.svg" alt=""></a>
+        <a href="#"><img src="img/vk.svg" alt=""></a>
+        <a href="#"><img src="img/OK.svg" alt=""></a>
+        <a href="#"><img src="img/instagram.svg" alt=""></a>
       </div>
       <a class="adress font__opensans-400" href="#">г. Москва<br>Гранатный переулок 4, строение 2</a>
     </div>
